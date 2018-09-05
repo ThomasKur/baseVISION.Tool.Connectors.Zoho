@@ -1,70 +1,37 @@
 # Zoho API V2 Client
 
-This library allows connecting to the Zoho CRM API and requesting the most important entities from there.
+This library allows connecting to the Zoho CRM API v2 and requesting the most important entities from there.
+* Leads
+* Accounts
+* Contacts
+* Deals
+
+Instead of other library it is using the new version 2 OAuth based API.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+At the begining you need to generate your API access tokens. The easiest way is by following the manual of Zoho: https://www.zoho.com/crm/help/api/v2/#oauth-request
 
-### Prerequisites
+The API client is available as a nuget package and can easily be installed from there.
 
-What things you need to install the software and how to install them
-
+Creating the client by specifying the secrets you received in the step before:
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
+ZohoClient client = new ZohoClient(new Uri("https://accounts.zoho.eu/"), "%ClientId%", "%ClientSecret%", "%RefreshToken%");
+            
 ```
 
-And repeat
+### Retrieving Objects
 
+Retrieve a list or a single item:
 ```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+Result<Contact> result = client.Contacts.List();
+Result<Contact> result2 = client.Contacts.Get("106140000000120145");
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
+Adding a new item
 ```
-Give an example
+client.Contacts.Add(new Connectors.Zoho.Model.Contact() { FirstName="Test" });
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -72,9 +39,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Thomas Kurth** - *Initial work* 
 
 ## License
 
