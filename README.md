@@ -28,7 +28,7 @@ Result<Contact> result = client.Contacts.List();
 Result<Contact> result2 = client.Contacts.Get("106140000000120145");
 ```
 
-Adding a new item
+Adding a new item:
 ```
 client.Contacts.Add(new Connectors.Zoho.Model.Contact() { FirstName="Test" });
 ```
