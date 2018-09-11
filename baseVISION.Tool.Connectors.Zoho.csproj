@@ -10,6 +10,10 @@
     <Description>This API client is using version 2 of the Zoho CRM API. This library allows connecting to the Zoho CRM API v2 and requestingand modifing the most important entities from there.</Description>
     <Company>Thomas Kurth</Company>
     <PackageProjectUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/README.md</PackageProjectUrl>
+    <Copyright>Thomas Kurth</Copyright>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
+    <PackageReleaseNotes>1.0.0: First Version</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
