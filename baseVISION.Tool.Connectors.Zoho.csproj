@@ -3,7 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Thomas Kurth</Authors>
+    <Product>Zoho API V2 Client</Product>
+    <Description>This API client is using version 2 of the Zoho CRM API. This library allows connecting to the Zoho CRM API v2 and requestingand modifing the most important entities from there.</Description>
+    <Company>Thomas Kurth</Company>
+    <PackageProjectUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/README.md</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
