@@ -14,6 +14,7 @@
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
     <PackageReleaseNotes>1.0.0: First Version</PackageReleaseNotes>
+    <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
