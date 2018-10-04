@@ -33,7 +33,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
             return false;
         }
         [JsonProperty("Lead_Conversion_Time")]
-        public DateTimeOffset? LeadConversionTime { get; set; }
+        public Decimal? LeadConversionTime { get; set; }
         public bool ShouldSerializeLeadConversionTime()
         {
             return false;
@@ -122,6 +122,12 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("Lead_Source")]
         public string LeadSource { get; set; }
 
+        [JsonProperty("HarvestEstimateID")]
+        public string HarvestEstimateID { get; set; }
+
+        [JsonProperty("HarvestEstimateUrl")]
+        public Uri HarvestEstimateUrl { get; set; }
+        
         [JsonProperty("Tag")]
         public List<LookupObject> Tag { get; set; }
 

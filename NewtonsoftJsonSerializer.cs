@@ -67,6 +67,7 @@ namespace baseVISION.Tool.Connectors.Zoho
                 };
                 s.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
                 return new NewtonsoftJsonSerializer(s);
+
             }
         }
     }

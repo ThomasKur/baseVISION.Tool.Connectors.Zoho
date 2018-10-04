@@ -13,12 +13,13 @@
     <Copyright>Thomas Kurth</Copyright>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
-    <PackageReleaseNotes>1.0.2: Enum Value for Lead Source fixed
+    <PackageReleaseNotes>1.0.3: Enum Value conversion fixed by Adding an Unknown Value which is choosen if the value is not available in the enum.
+1.0.2: Enum Value for Lead Source fixed
 1.0.1: Enum Value for Account Rating fixed
 1.0.0: First Version
 </PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
