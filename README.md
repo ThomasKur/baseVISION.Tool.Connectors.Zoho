@@ -1,22 +1,21 @@
-# Zoho API V2 Client
+# Get Harvest API V2 Client 
 
-This library allows connecting to the Zoho CRM API v2 and requesting the most important entities from there.
-* Leads
-* Accounts
-* Contacts
-* Deals
+This library allows connecting to the Harvest Timetracking API v2 and requesting and modifying all entities from there.
+https://www.getharvest.com/
 
 Instead of other library it is using the new version 2 OAuth based API.
 
 ## Getting Started
 
-At the begining you need to generate your API access tokens. The easiest way is by following the manual of Zoho: https://www.zoho.com/crm/help/api/v2/#oauth-request
+At the begining you need to generate your Personal Access token. The easiest way is by following the manual of Harvest https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/#personal-access-tokens or directly navigating to https://id.getharvest.com/developers.
 
 The API client is available as a nuget package and can easily be installed from there.
 
 Creating the client by specifying the secrets you received in the step before:
 ```
-ZohoClient client = new ZohoClient(new Uri("https://accounts.zoho.eu/"), "%ClientId%", "%ClientSecret%", "%RefreshToken%");
+HarvestClient c = new HarvestClient("%AccountId%", "%PersonalAccessToken%");
+
+           
             
 ```
 
@@ -24,13 +23,19 @@ ZohoClient client = new ZohoClient(new Uri("https://accounts.zoho.eu/"), "%Clien
 
 Retrieve a list or a single item:
 ```
-Result<Contact> result = client.Contacts.List();
-Result<Contact> result2 = client.Contacts.Get("106140000000120145");
+ResultEstimates e = c.Estimates.List();
+ResultTasks t = c.Tasks.List();
+ResultTimeEntries te = c.TimeEntries.List();
+ResultClients cl = c.Clients.List();
+
+Client ExistingClient = c.Clients.Get(12143655);
+
 ```
 
 Adding a new item:
 ```
-client.Contacts.Add(new Connectors.Zoho.Model.Contact() { FirstName="Test" });
+Client newClient = new Client() { Name = "TestKUR", Address = "TestStrasse" };
+Client newCreatedClient = c.Clients.Add(newClient);
 ```
 
 ## Versioning
