@@ -21,7 +21,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty(PropertyName = "Last_Activity_Time")]
         
         public DateTimeOffset? LastActivityTime { get; set; }
-        public bool ShouldSerializeLastActivityTime()
+        public virtual bool ShouldSerializeLastActivityTime()
         {
             return false;
         }
@@ -30,14 +30,14 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty(PropertyName = "$converted")]
         
         public bool Converted { get; set; }
-        public bool ShouldSerializeConverted()
+        public virtual bool ShouldSerializeConverted()
         {
             return false;
         }
         [JsonProperty(PropertyName = "$process_flow")]
         
         public bool ProcessFlow { get; set; }
-        public bool ShouldSerializeProcessFlow()
+        public virtual bool ShouldSerializeProcessFlow()
         {
             return false;
         }
@@ -48,7 +48,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty(PropertyName = "Data_Processing_Basis_Details")]
         
         public string DataProcessingBasisDetails { get; set; }
-        public bool ShouldSerializeDataProcessingBasisDetails()
+        public virtual bool ShouldSerializeDataProcessingBasisDetails()
         {
             return false;
         }
@@ -58,7 +58,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty(PropertyName = "id")]
         
         public string Id { get; set; }
-        public bool ShouldSerializeId()
+        public virtual bool ShouldSerializeId()
         {
             return false;
         }
@@ -76,7 +76,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         
 
         public DateTimeOffset? LastVisitedTime { get; set; }
-        public bool ShouldSerializeLastVisitedTime()
+        public virtual bool ShouldSerializeLastVisitedTime()
         {
             return false;
         }
@@ -119,7 +119,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         
 
         public LookupObject ModifiedBy { get; set; }
-        public bool ShouldSerializeModifiedBy()
+        public virtual bool ShouldSerializeModifiedBy()
         {
             return false;
         }
@@ -132,7 +132,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty(PropertyName = "Email_Opt_Out")]
         
         public bool EmailOptOut { get; set; }
-        public bool ShouldSerializeEmailOptOut()
+        public virtual bool ShouldSerializeEmailOptOut()
         {
             return false;
         }
@@ -142,7 +142,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty(PropertyName = "Modified_Time")]
         
         public DateTimeOffset? ModifiedTime { get; set; }
-        public bool ShouldSerializeModifiedTime()
+        public virtual bool ShouldSerializeModifiedTime()
         {
             return false;
         }
@@ -153,14 +153,14 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         
 
         public bool StopProcessing { get; set; }
-        public bool ShouldSerializeStopProcessing()
+        public virtual bool ShouldSerializeStopProcessing()
         {
             return false;
         }
         [JsonProperty(PropertyName = "First_Visited_Time")]
         
         public DateTimeOffset? FirstVisitedTime { get; set; }
-        public bool ShouldSerializeFirstVisitedTime()
+        public virtual bool ShouldSerializeFirstVisitedTime()
         {
             return false;
         }

@@ -10,7 +10,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
     {
         [JsonProperty("Owner")]
         public LookupObject Owner { get; set; }
-        public bool ShouldSerializeOwner()
+        public virtual bool ShouldSerializeOwner()
         {
             return false;
         }
@@ -41,7 +41,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("Last_Activity_Time")]
         
         public DateTimeOffset? LastActivityTime { get; set; }
-        public bool ShouldSerializeLastActivityTime()
+        public virtual bool ShouldSerializeLastActivityTime()
         {
             return false;
         }
@@ -51,14 +51,14 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("Modified_By")]
         
         public LookupObject ModifiedBy { get; set; }
-        public bool ShouldSerializeModifiedBy()
+        public virtual bool ShouldSerializeModifiedBy()
         {
             return false;
         }
         [JsonProperty("$process_flow")]
         
         public bool ProcessFlow { get; set; }
-        public bool ShouldSerializeProcessFlow()
+        public virtual bool ShouldSerializeProcessFlow()
         {
             return false;
         }
@@ -71,7 +71,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("id")]
         
         public string Id { get; set; }
-        public bool ShouldSerializeId()
+        public virtual bool ShouldSerializeId()
         {
             return false;
         }
@@ -84,7 +84,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("$approved")]
         
         public bool Approved { get; set; }
-        public bool ShouldSerializeApproved()
+        public virtual bool ShouldSerializeApproved()
         {
             return false;
         }
@@ -94,13 +94,13 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("$approval")]
         
         public Approval Approval { get; set; }
-        public bool ShouldSerializeApproval()
+        public virtual bool ShouldSerializeApproval()
         {
             return false;
         }
         [JsonProperty("Modified_Time")]
         public DateTimeOffset? ModifiedTime { get; set; }
-        public bool ShouldSerializeModifiedTime()
+        public virtual bool ShouldSerializeModifiedTime()
         {
             return false;
         }
@@ -111,7 +111,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
 
         [JsonProperty("Created_Time")]
         public DateTimeOffset? CreatedTime { get; set; }
-        public bool ShouldSerializeCreatedTime()
+        public virtual bool ShouldSerializeCreatedTime()
         {
             return false;
         }
@@ -119,14 +119,14 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("$followed")]
         
         public bool Followed { get; set; }
-        public bool ShouldSerializeFollowed()
+        public virtual bool ShouldSerializeFollowed()
         {
             return false;
         }
         [JsonProperty("$editable")]
         
         public bool Editable { get; set; }
-        public bool ShouldSerializeEditable()
+        public virtual bool ShouldSerializeEditable()
         {
             return false;
         }
@@ -145,7 +145,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("Created_By")]
         
         public LookupObject CreatedBy { get; set; }
-        public bool ShouldSerializeCreatedBy()
+        public virtual bool ShouldSerializeCreatedBy()
         {
             return false;
         }
