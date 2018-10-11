@@ -49,13 +49,26 @@ namespace baseVISION.Tool.Connectors.Zoho
 
             // Check Token the first time
             CheckToken();
-
+            InitializeDataClient();
             // Prepare Client
             Leads = new Module<Lead>(this, "Leads");
             Accounts = new Module<Account>(this, "Accounts");
             Contacts = new Module<Contact>(this, "Contacts");
             Deals = new Module<Deal>(this, "Deals");
         }
+
+        private void InitializeDataClient()
+        {
+            restDataClient = new RestClient(Token.ApiDomain);
+            restDataClient.AddHandler("application/json", serializer);
+            restDataClient.AddHandler("text/json", serializer);
+            restDataClient.AddHandler("text/x-json", serializer);
+            restDataClient.AddHandler("text/javascript", serializer);
+            restDataClient.AddHandler("*+json", serializer);
+
+            restDataClient.AddDefaultHeader("Authorization", "Zoho-oauthtoken " + Token.AccessToken);
+        }
+
         internal T Execute<T>(RestRequest request) where T : new()
         {
             CheckToken();

@@ -30,14 +30,7 @@ namespace baseVISION.Tool.Connectors.Zoho
             var response = restTokenClient.Execute<ZohoTokenInformation>(r);
             ResponseErrorCheck(response);
             Token = response.Data;
-            restDataClient = new RestClient(Token.ApiDomain);
-            restDataClient.AddHandler("application/json", serializer);
-            restDataClient.AddHandler("text/json", serializer);
-            restDataClient.AddHandler("text/x-json", serializer);
-            restDataClient.AddHandler("text/javascript", serializer);
-            restDataClient.AddHandler("*+json", serializer);
-
-            restDataClient.AddDefaultHeader("Authorization", "Zoho-oauthtoken " + Token.AccessToken);
+            InitializeDataClient();
         }
     }
 }
