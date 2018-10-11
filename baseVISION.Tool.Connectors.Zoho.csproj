@@ -13,7 +13,8 @@
     <Copyright>Thomas Kurth</Copyright>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
-    <PackageReleaseNotes>1.0.5: Make ShouldSerialize methods virtual to allow override. 
+    <PackageReleaseNotes>1.0.6: Allow specifiing the accesstoken if this is already available. Especially for stateless systems like Azure Functions this can be Helpful
+1.0.5: Make ShouldSerialize methods virtual to allow override. 
 1.0.4: Updating RestSharp and JSON.net
 1.0.3: Enum Value conversion fixed by Adding an Unknown Value which is choosen if the value is not available in the enum.
 1.0.2: Enum Value for Lead Source fixed
@@ -21,7 +22,7 @@
 1.0.0: First Version
 </PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
   </PropertyGroup>
 
   <ItemGroup>

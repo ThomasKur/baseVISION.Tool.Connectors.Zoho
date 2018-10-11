@@ -8,7 +8,7 @@ namespace baseVISION.Tool.Connectors.Zoho
 {
     public partial class ZohoClient
     {
-        private ZohoTokenInformation token = null;
+        public ZohoTokenInformation Token { get; private set; }
         private Uri endpoint = null;
         private string clientSecret = null;
         private string clientId = null;
@@ -26,11 +26,32 @@ namespace baseVISION.Tool.Connectors.Zoho
             // Setting up JSON Serialization Engine
             serializer = NewtonsoftJsonSerializer.Default;
             
-            // Request Token the first time
-            RefreshToken();
+            // Check Token the first time
+            CheckToken();
 
             // Prepare Client
             Leads = new Module<Lead>(this,"Leads");
+            Accounts = new Module<Account>(this, "Accounts");
+            Contacts = new Module<Contact>(this, "Contacts");
+            Deals = new Module<Deal>(this, "Deals");
+        }
+        public ZohoClient(Uri endpoint, string clientId, string clientSecret, string refreshToken,ZohoTokenInformation accessToken)
+        {
+            this.Token = accessToken;
+            restTokenClient = new RestClient(endpoint);
+            this.endpoint = endpoint;
+            this.clientId = clientId;
+            this.clientSecret = clientSecret;
+            this.refreshToken = refreshToken;
+
+            // Setting up JSON Serialization Engine
+            serializer = NewtonsoftJsonSerializer.Default;
+
+            // Check Token the first time
+            CheckToken();
+
+            // Prepare Client
+            Leads = new Module<Lead>(this, "Leads");
             Accounts = new Module<Account>(this, "Accounts");
             Contacts = new Module<Contact>(this, "Contacts");
             Deals = new Module<Deal>(this, "Deals");
