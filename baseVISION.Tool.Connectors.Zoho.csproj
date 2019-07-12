@@ -13,7 +13,8 @@
     <Copyright>Thomas Kurth</Copyright>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
-    <PackageReleaseNotes>1.0.7: Improved Access Token Caching and reliability. 
+    <PackageReleaseNotes>1.0.9: Added trigger properties so that on add or update workflows are also triggered.
+1.0.7: Improved Access Token Caching and reliability. 
 1.0.6: Allow specifiing the accesstoken if this is already available. Especially for stateless systems like Azure Functions this can be Helpful
 1.0.5: Make ShouldSerialize methods virtual to allow override. 
 1.0.4: Updating RestSharp and JSON.net
@@ -23,7 +24,9 @@
 1.0.0: First Version
 </PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>1.0.7</Version>
+    <Version>1.0.9</Version>
+    <AssemblyVersion>1.0.9.0</AssemblyVersion>
+    <FileVersion>1.0.9.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

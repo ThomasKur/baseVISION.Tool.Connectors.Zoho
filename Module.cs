@@ -55,6 +55,8 @@ namespace baseVISION.Tool.Connectors.Zoho
             
             Input<T> i = new Input<T>();
             i.Data.Add(record);
+            i.trigger = new System.Collections.Generic.List<string>();
+            i.trigger.Add("workflow");
             r.JsonSerializer = client.serializer;
             r.AddJsonBody(i);
             return client.Execute<Result<ActionResult>>(r);
@@ -65,6 +67,8 @@ namespace baseVISION.Tool.Connectors.Zoho
             r.AddUrlSegment("id", record.Id);
             Input<T> i = new Input<T>();
             i.Data.Add(record);
+            i.trigger = new System.Collections.Generic.List<string>();
+            i.trigger.Add("workflow");
             r.JsonSerializer = client.serializer;
             r.AddJsonBody(i);
             return client.Execute<Result<ActionResult>>(r);
