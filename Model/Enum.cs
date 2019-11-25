@@ -9,7 +9,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
     [JsonConverter(typeof(DefaultUnknownEnumConverter), (int)Unknown)]
     public enum AccountType { Analyst,Competitor,Customer,Investor,Partner,Press,Prospect,Other,Unknown }
     [JsonConverter(typeof(DefaultUnknownEnumConverter), (int)Unknown)]
-    public enum AccountRating { Acquired,Active,[EnumMember(Value = "Market Failed")]MarketFailed,[EnumMember(Value = "Project Canceled")] ProjectCanceled, [EnumMember(Value = "Shut Down")] Shutdown,Unknown  }
+    public enum AccountRating { Acquired,Active,Inactive, [EnumMember(Value = "Shut Down")] Shutdown,Unknown  }
     [JsonConverter(typeof(DefaultUnknownEnumConverter), (int)Unknown)]
     public enum Industry { Communications, Technology, [EnumMember(Value = "Government/Military")] Government,Manufacturing, [EnumMember(Value = "Financial Services")] FinancialServices, [EnumMember(Value = "IT Services")]ITServices,Education,Pharma, [EnumMember(Value = "Real Estate")]RealEstate,Consulting, [EnumMember(Value = "Health Care")]HealthCare,Transportation,Retail,Unknown }
     [JsonConverter(typeof(DefaultUnknownEnumConverter), (int)Unknown)]

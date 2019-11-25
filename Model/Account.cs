@@ -154,5 +154,14 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
 
         [JsonProperty("Annual_Revenue")]
         public long? AnnualRevenue { get; set; }
+
+        [JsonProperty("Days_since_last_Timereport")]
+        public long? DaysSinceLastTimereport { get; set; }
+
+        [JsonProperty("Azure_Tenant_ID")]
+        public string AzureTenantID { get; set; }
+
+        [JsonProperty("Azure_AD_Primary_Domain_Name")]
+        public string AzureADPrimaryDomainName { get; set; }
     }
 }
