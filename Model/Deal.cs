@@ -87,8 +87,8 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
             return false;
         }
         [JsonProperty("Amount")]
-        public long Amount { get; set; }
-
+        public long? Amount { get { return _amount; } set { _amount = value ?? 0; } }
+        private long _amount = 0;
         [JsonProperty("$followed")]
         public bool Followed { get; set; }
         public virtual bool ShouldSerializeFollowed()
