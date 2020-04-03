@@ -14,7 +14,7 @@
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
     <PackageReleaseNotes>1.0.11: Bugfix when Amount is null
-	1.0.10: Added new fields to accounts
+1.0.10: Added new fields to accounts
 1.0.9: Added trigger properties so that on add or update workflows are also triggered.
 1.0.7: Improved Access Token Caching and reliability. 
 1.0.6: Allow specifiing the accesstoken if this is already available. Especially for stateless systems like Azure Functions this can be Helpful
@@ -26,9 +26,9 @@
 1.0.0: First Version
 </PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>1.0.10</Version>
-    <AssemblyVersion>1.0.10.0</AssemblyVersion>
-    <FileVersion>1.0.10.0</FileVersion>
+    <Version>1.0.11</Version>
+    <AssemblyVersion>1.0.11.0</AssemblyVersion>
+    <FileVersion>1.0.11.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
