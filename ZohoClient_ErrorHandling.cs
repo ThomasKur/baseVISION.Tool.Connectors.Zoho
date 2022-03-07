@@ -6,7 +6,7 @@ namespace baseVISION.Tool.Connectors.Zoho
 {
     public partial class ZohoClient
     {
-        private void ResponseErrorCheck(IRestResponse response)
+        private void ResponseErrorCheck(RestResponse response)
         {
             switch (response.ResponseStatus)
             {

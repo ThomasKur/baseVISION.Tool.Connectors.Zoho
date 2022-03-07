@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using RestSharp;
-using RestSharp.Deserializers;
 using System.Net;
 
 
@@ -19,7 +18,7 @@ namespace baseVISION.Tool.Connectors.Zoho
         }
         private void RefreshToken()
         {
-            RestSharp.RestRequest r = new RestSharp.RestRequest("oauth/v2/token", Method.POST);
+            RestSharp.RestRequest r = new RestSharp.RestRequest("oauth/v2/token", Method.Post);
             r.AlwaysMultipartFormData = true;
             r.AddParameter("client_id", clientId, ParameterType.GetOrPost);
             r.AddParameter("client_secret", clientSecret, ParameterType.GetOrPost);
@@ -27,9 +26,11 @@ namespace baseVISION.Tool.Connectors.Zoho
             r.AddParameter("grant_type", "refresh_token", ParameterType.GetOrPost);
             r.RequestFormat = DataFormat.Json;
 
-            var response = restTokenClient.Execute<ZohoTokenInformation>(r);
-            ResponseErrorCheck(response);
-            Token = response.Data;
+            var response = restTokenClient.ExecuteAsync<ZohoTokenInformation>(r);
+            response.Start();
+            response.Wait();
+            ResponseErrorCheck(response.Result);
+            Token = response.Result.Data;
             InitializeDataClient();
         }
     }

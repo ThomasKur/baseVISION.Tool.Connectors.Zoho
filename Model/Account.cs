@@ -163,5 +163,9 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
 
         [JsonProperty("Azure_AD_Primary_Domain_Name")]
         public string AzureADPrimaryDomainName { get; set; }
+
+        [JsonProperty("Signed_NDA")]
+        public DateTimeOffset? SignedNDA { get; set; }
+        
     }
 }
