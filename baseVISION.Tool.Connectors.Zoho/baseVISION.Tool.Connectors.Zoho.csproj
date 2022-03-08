@@ -13,7 +13,8 @@
     <Copyright>Thomas Kurth</Copyright>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
-    <PackageReleaseNotes>2.0.0: Use Restsharp 107 and JSONNet 13
+    <PackageReleaseNotes>2.0.1: Stable release with new libraries and added support for Async usage
+2.0.0-alpha: Use Restsharp 107 and JSONNet 13
 1.0.12: Added new fields (SignedNDA) to accounts
 1.0.11: Bugfix when Amount is null
 1.0.10: Added new fields to accounts
@@ -28,9 +29,9 @@
 1.0.0: First Version
 </PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>2.0.0-alpha3</Version>
-    <AssemblyVersion>2.0.0.3</AssemblyVersion>
-    <FileVersion>2.0.0.3</FileVersion>
+    <Version>2.0.1</Version>
+    <AssemblyVersion>2.0.1.0</AssemblyVersion>
+    <FileVersion>2.0.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

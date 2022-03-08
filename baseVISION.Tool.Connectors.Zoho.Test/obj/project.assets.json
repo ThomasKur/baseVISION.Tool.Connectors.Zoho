@@ -1747,7 +1747,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "baseVISION.Tool.Connectors.Zoho/2.0.0-alpha3": {
+      "baseVISION.Tool.Connectors.Zoho/2.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -5965,7 +5965,7 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "baseVISION.Tool.Connectors.Zoho/2.0.0-alpha3": {
+    "baseVISION.Tool.Connectors.Zoho/2.0.1": {
       "type": "project",
       "path": "../baseVISION.Tool.Connectors.Zoho/baseVISION.Tool.Connectors.Zoho.csproj",
       "msbuildProject": "../baseVISION.Tool.Connectors.Zoho/baseVISION.Tool.Connectors.Zoho.csproj"
@@ -5979,7 +5979,7 @@
       "Microsoft.Extensions.Configuration.Binder >= 6.0.0",
       "Microsoft.Extensions.Configuration.UserSecrets >= 6.0.1",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
-      "baseVISION.Tool.Connectors.Zoho >= 2.0.0-alpha3",
+      "baseVISION.Tool.Connectors.Zoho >= 2.0.1",
       "coverlet.collector >= 1.2.0"
     ]
   },
