@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Thomas Kurth</Authors>
+    <Product>Zoho API V2 Client</Product>
+    <Description>This API client is using version 2 of the Zoho CRM API. This library allows connecting to the Zoho CRM API v2 and requestingand modifing the most important entities from there.</Description>
+    <Company>Thomas Kurth</Company>
+    <PackageProjectUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/README.md</PackageProjectUrl>
+    <Copyright>Thomas Kurth</Copyright>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
+    <PackageReleaseNotes>2.0.0: Use Restsharp 107 and JSONNet 13
+1.0.12: Added new fields (SignedNDA) to accounts
+1.0.11: Bugfix when Amount is null
+1.0.10: Added new fields to accounts
+1.0.9: Added trigger properties so that on add or update workflows are also triggered.
+1.0.7: Improved Access Token Caching and reliability. 
+1.0.6: Allow specifiing the accesstoken if this is already available. Especially for stateless systems like Azure Functions this can be Helpful
+1.0.5: Make ShouldSerialize methods virtual to allow override. 
+1.0.4: Updating RestSharp and JSON.net
+1.0.3: Enum Value conversion fixed by Adding an Unknown Value which is choosen if the value is not available in the enum.
+1.0.2: Enum Value for Lead Source fixed
+1.0.1: Enum Value for Account Rating fixed
+1.0.0: First Version
+</PackageReleaseNotes>
+    <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
+    <Version>2.0.0-alpha3</Version>
+    <AssemblyVersion>2.0.0.3</AssemblyVersion>
+    <FileVersion>2.0.0.3</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="107.3.0" />
+  </ItemGroup>
+
+</Project>
