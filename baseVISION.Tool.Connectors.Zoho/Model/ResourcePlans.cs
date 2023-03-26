@@ -30,7 +30,6 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         public string JobRole { get; set; }
         [JsonProperty("Preferred_Employee")]
         public LookupObject Preferred_Employee { get; set; }
-        public string Employee { get { return this.Preferred_Employee.Name; } }
 
         [JsonProperty("Estimated_Effort_in_Days")]
         public int EstimatedEffortInDays { get; set; }

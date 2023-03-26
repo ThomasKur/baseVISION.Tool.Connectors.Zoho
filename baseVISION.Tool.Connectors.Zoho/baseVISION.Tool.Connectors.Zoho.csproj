@@ -13,7 +13,8 @@
     <Copyright>Thomas Kurth</Copyright>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
-    <PackageReleaseNotes>2.04: Change ResourcePlan Employee field to new picklist Preferred_Employee
+    <PackageReleaseNotes>2.0.6: fix employee null
+2.0.4: Change ResourcePlan Employee field to new picklist Preferred_Employee
 2.0.3: Bugfix resourceplan
 2.0.2: Added new Custom Module ResourcePlan
 2.0.1: Stable release with new libraries and added support for Async usage
@@ -32,9 +33,9 @@
 1.0.0: First Version
 </PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>2.0.4</Version>
-    <AssemblyVersion>2.0.4.0</AssemblyVersion>
-    <FileVersion>2.0.4.0</FileVersion>
+    <Version>2.0.6</Version>
+    <AssemblyVersion>2.0.6.0</AssemblyVersion>
+    <FileVersion>2.0.6.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
