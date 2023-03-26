@@ -67,6 +67,8 @@ namespace baseVISION.Tool.Connectors.Zoho.Test
             Initialize();
             var leads = zohoClient.Leads.List();
             Assert.IsTrue(leads.Data.Count > 0);
+            var resourceplan = zohoClient.ResourcePlans.List();
+            Assert.IsTrue(resourceplan.Data.Count > 0);
         }
     }
 }

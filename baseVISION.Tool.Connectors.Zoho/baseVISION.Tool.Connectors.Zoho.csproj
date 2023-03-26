@@ -13,7 +13,10 @@
     <Copyright>Thomas Kurth</Copyright>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
-    <PackageReleaseNotes>2.0.1: Stable release with new libraries and added support for Async usage
+    <PackageReleaseNotes>2.04: Change ResourcePlan Employee field to new picklist Preferred_Employee
+2.0.3: Bugfix resourceplan
+2.0.2: Added new Custom Module ResourcePlan
+2.0.1: Stable release with new libraries and added support for Async usage
 2.0.0-alpha: Use Restsharp 107 and JSONNet 13
 1.0.12: Added new fields (SignedNDA) to accounts
 1.0.11: Bugfix when Amount is null
@@ -29,14 +32,14 @@
 1.0.0: First Version
 </PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>2.0.1</Version>
-    <AssemblyVersion>2.0.1.0</AssemblyVersion>
-    <FileVersion>2.0.1.0</FileVersion>
+    <Version>2.0.4</Version>
+    <AssemblyVersion>2.0.4.0</AssemblyVersion>
+    <FileVersion>2.0.4.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="RestSharp" Version="107.3.0" />
+    <PackageReference Include="RestSharp" Version="108.0.1" />
   </ItemGroup>
 
 </Project>
