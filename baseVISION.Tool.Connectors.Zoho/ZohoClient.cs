@@ -18,8 +18,8 @@ namespace baseVISION.Tool.Connectors.Zoho
         private RestClient restTokenClient = null;
         private RestClient restDataClient = null;
         public ZohoClient(Uri endpoint, string clientId, string clientSecret, string refreshToken, int asyncTaskTimeout = 5000) {
-            restTokenClient = new RestClient(endpoint);
-            restTokenClient.UseSerializer(() => new NewtonsoftJsonSerializer());
+            restTokenClient = new RestClient(endpoint,configureSerialization: s => s.UseSerializer(() => new NewtonsoftJsonSerializer()));
+
 
             this.endpoint = endpoint;
             this.clientId = clientId;
@@ -40,8 +40,8 @@ namespace baseVISION.Tool.Connectors.Zoho
         }
         public ZohoClient(Uri endpoint, string clientId, string clientSecret, string refreshToken,ZohoTokenInformation accessToken, int asyncTaskTimeout = 5000)
         {
-            restTokenClient = new RestClient(endpoint);
-            restTokenClient.UseSerializer(() => new NewtonsoftJsonSerializer());
+            restTokenClient = new RestClient(endpoint, configureSerialization: s => s.UseSerializer(() => new NewtonsoftJsonSerializer()));
+
 
             this.Token = accessToken;
             this.endpoint = endpoint;
@@ -65,8 +65,7 @@ namespace baseVISION.Tool.Connectors.Zoho
 
         private void InitializeDataClient()
         {
-            restDataClient = new RestClient(Token.ApiDomain);
-            restDataClient.UseSerializer(() => new NewtonsoftJsonSerializer());
+            restDataClient = new RestClient(Token.ApiDomain, configureSerialization: s => s.UseSerializer(() => new NewtonsoftJsonSerializer()));
 
             restDataClient.AddDefaultHeader("Authorization", "Zoho-oauthtoken " + Token.AccessToken);
         }

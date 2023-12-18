@@ -82,7 +82,7 @@ namespace baseVISION.Tool.Connectors.Zoho
             "application/json", "text/json", "text/x-json", "text/javascript", "*+json"
         };
 
-        public string ContentType { get; set; } = "application/json";
+        public ContentType ContentType { get; set; } = "application/json";
 
         public DataFormat DataFormat => DataFormat.Json;
 
@@ -90,7 +90,7 @@ namespace baseVISION.Tool.Connectors.Zoho
 
         public IDeserializer Deserializer => this;
 
-        public SupportsContentType SupportsContentType => contentType => contentType.Contains("json");
+        public SupportsContentType SupportsContentType => contentType => contentType.Value.Contains("json");
 
 
     }

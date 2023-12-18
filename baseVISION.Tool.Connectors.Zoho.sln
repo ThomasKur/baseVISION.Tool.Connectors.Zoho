@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "baseVISION.Tool.Connectors.Zoho", "baseVISION.Tool.Connectors.Zoho\baseVISION.Tool.Connectors.Zoho.csproj", "{31D7E424-5811-400F-8885-77C1222B3427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baseVISION.Tool.Connectors.Zoho.Test", "baseVISION.Tool.Connectors.Zoho.Test\baseVISION.Tool.Connectors.Zoho.Test.csproj", "{27017412-A083-410F-BE85-52E73372ABE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "baseVISION.Tool.Connectors.Zoho.Test", "baseVISION.Tool.Connectors.Zoho.Test\baseVISION.Tool.Connectors.Zoho.Test.csproj", "{27017412-A083-410F-BE85-52E73372ABE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
