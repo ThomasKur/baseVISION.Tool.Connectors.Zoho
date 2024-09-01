@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.UserSecrets;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Linq;
 
 namespace baseVISION.Tool.Connectors.Zoho.Test
 {
@@ -65,10 +66,9 @@ namespace baseVISION.Tool.Connectors.Zoho.Test
         public void ListTest()
         {
             Initialize();
-            var leads = zohoClient.Leads.List();
+            var leads = zohoClient.Recurrings.List();
+            var test = leads.Data.Where(x => x.Name.Contains("ignore")).ToList();
             Assert.IsTrue(leads.Data.Count > 0);
-            var resourceplan = zohoClient.ResourcePlans.List();
-            Assert.IsTrue(resourceplan.Data.Count > 0);
         }
     }
 }

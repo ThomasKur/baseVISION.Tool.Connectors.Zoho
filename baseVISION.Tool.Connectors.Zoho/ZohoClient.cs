@@ -37,6 +37,8 @@ namespace baseVISION.Tool.Connectors.Zoho
             Contacts = new Module<Contact>(this, "Contacts");
             Deals = new Module<Deal>(this, "Deals");
             ResourcePlans = new Module<ResourcePlans>(this, "ResourcePlans");
+
+            Recurrings = new Module<Recurring>(this, "Recurrings");
         }
         public ZohoClient(Uri endpoint, string clientId, string clientSecret, string refreshToken,ZohoTokenInformation accessToken, int asyncTaskTimeout = 5000)
         {
@@ -61,6 +63,7 @@ namespace baseVISION.Tool.Connectors.Zoho
             Contacts = new Module<Contact>(this, "Contacts");
             Deals = new Module<Deal>(this, "Deals");
             ResourcePlans = new Module<ResourcePlans>(this, "ResourcePlans");
+            Recurrings = new Module<Recurring>(this, "Recurrings");
         }
 
         private void InitializeDataClient()
@@ -92,5 +95,6 @@ namespace baseVISION.Tool.Connectors.Zoho
         public Module<Contact> Contacts { get; private set; }
         public Module<Deal> Deals { get; private set; }
         public Module<ResourcePlans> ResourcePlans { get; private set; }
+        public Module<Recurring> Recurrings { get; private set; }
     }
 }

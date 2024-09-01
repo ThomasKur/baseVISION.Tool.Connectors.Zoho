@@ -47,6 +47,8 @@ namespace baseVISION.Tool.Connectors.Zoho
                 default:
                     break;
             }
+            if(response.Content.Contains("invalid_client_secret"))
+                throw new Exception("Invalid Client Secret:  Update the client secret to a correct one. Details: " + response.Content);
         }
     }
 }
