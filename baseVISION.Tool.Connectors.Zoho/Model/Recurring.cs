@@ -200,6 +200,10 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("Renewal_Month")]
         public Month RenewalMonth { get; set; }
 
+        [JsonProperty("Reference")]
+        public String Reference { get; set; }
+
+
         [JsonProperty("Service_or_Product_Category")]
         public ServiceOrProductCategory? ServiceOrProductCategory { get; set; }
 
