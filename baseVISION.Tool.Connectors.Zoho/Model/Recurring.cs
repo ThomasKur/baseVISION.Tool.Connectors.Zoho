@@ -186,7 +186,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         public decimal? partDiscount { get; set; }
 
         [JsonProperty("partNumber")]
-        public PartNumber? partNumber { get; set; }
+        public String partNumber { get; set; }
 
         [JsonProperty("partQuantity")]
         public int? partQuantity { get; set; }
@@ -196,6 +196,9 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
 
         [JsonProperty("partUnit")]
         public PartUnit? partUnit { get; set; }
+
+        [JsonProperty("RmaProject")]
+        public String RmaProject { get; set; }
 
         [JsonProperty("Renewal_Month")]
         public Month RenewalMonth { get; set; }

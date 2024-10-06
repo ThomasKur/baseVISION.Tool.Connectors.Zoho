@@ -33,7 +33,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
     [JsonConverter(typeof(DefaultUnknownEnumConverter), (int)Unknown)]
     public enum CCHoursType { SPO,SPA, [EnumMember(Value = "No Hours")] NoHours, Unknown }
     [JsonConverter(typeof(DefaultUnknownEnumConverter), (int)Unknown)]
-    public enum PartNumber { MicrosoftCSP,netECM,PatchMyPc, WimAsAService, [EnumMember(Value = "Security Operation Center")] SOC, [EnumMember(Value = "i-doit")] Idoit, [EnumMember(Value = "Connected Care")] ConnectedCare, [EnumMember(Value = "Basic Agreement")] BasicAgreement, [EnumMember(Value = "Active Security Service")] ActiveSecurityService, Unknown }
+    public enum PartNumber { [EnumMember(Value = "MicrosoftCSP 24")] MicrosoftCSP, [EnumMember(Value = "netECM 24")] netECM, [EnumMember(Value = "PatchMyPc 24")] PatchMyPc, [EnumMember(Value = "WimAsAService 24")] WimAsAService, [EnumMember(Value = "Security Operation Center 24")] SOC, [EnumMember(Value = "I-doit 24")] Idoit, [EnumMember(Value = "Connected Care 24")] ConnectedCare, [EnumMember(Value = "Basic Agreement 24")] BasicAgreement, [EnumMember(Value = "Active Security Service 24")] ActiveSecurityService, Unknown }
     [JsonConverter(typeof(DefaultUnknownEnumConverter), (int)Unknown)]
     public enum Month
     {
