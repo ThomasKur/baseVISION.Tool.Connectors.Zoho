@@ -160,8 +160,8 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("Next_Renewal_Date")]
         public DateTimeOffset? NextRenewalDate { get; set; }
 
-        [JsonProperty("No_End_Date")]
-        public bool NoEndDate { get; set; }
+        [JsonProperty("Terminated")]
+        public bool Terminated { get; set; }
 
         [JsonProperty("Onboarding_Harvest_Project_URL")]
         public Uri? OnboardingHarvestProjectURL { get; set; }
