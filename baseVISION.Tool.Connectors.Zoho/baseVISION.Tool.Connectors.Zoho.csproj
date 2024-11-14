@@ -12,7 +12,8 @@
     <Copyright>Thomas Kurth</Copyright>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
-    <PackageReleaseNotes>3.0.5: Add Rename field in Recurring to Terminated
+    <PackageReleaseNotes>3.0.6: Bugfix Date field handling / Update libraries
+3.0.5: Add Rename field in Recurring to Terminated
 3.0.4: Add RmaProject (Recurring)
 3.0.3: Add Reference field (Recurring)
 3.0.2: Update Restsharp / Add Recurrings
@@ -38,7 +39,7 @@
 1.0.0: First Version
 </PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>3.0.5</Version>
+    <Version>3.0.6</Version>
     <AssemblyVersion>3.0.5.0</AssemblyVersion>
     <FileVersion>3.0.5.0</FileVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -50,7 +51,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="RestSharp" Version="112.0.0" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="Pack">

@@ -18,7 +18,8 @@ namespace baseVISION.Tool.Connectors.Zoho
         private RestClient restTokenClient = null;
         private RestClient restDataClient = null;
         public ZohoClient(Uri endpoint, string clientId, string clientSecret, string refreshToken, int asyncTaskTimeout = 5000) {
-            restTokenClient = new RestClient(endpoint,configureSerialization: s => s.UseSerializer(() => new NewtonsoftJsonSerializer()));
+            JsonSerializer j = new JsonSerializer() { DateFormatHandling = DateFormatHandling.IsoDateFormat }; 
+            restTokenClient = new RestClient(endpoint,configureSerialization: s => s.UseSerializer(() => new NewtonsoftJsonSerializer(j)));
 
 
             this.endpoint = endpoint;
@@ -42,7 +43,8 @@ namespace baseVISION.Tool.Connectors.Zoho
         }
         public ZohoClient(Uri endpoint, string clientId, string clientSecret, string refreshToken,ZohoTokenInformation accessToken, int asyncTaskTimeout = 5000)
         {
-            restTokenClient = new RestClient(endpoint, configureSerialization: s => s.UseSerializer(() => new NewtonsoftJsonSerializer()));
+            JsonSerializer j = new JsonSerializer() { DateFormatHandling=DateFormatHandling.IsoDateFormat };
+            restTokenClient = new RestClient(endpoint, configureSerialization: s => s.UseSerializer(() => new NewtonsoftJsonSerializer(j)));
 
 
             this.Token = accessToken;

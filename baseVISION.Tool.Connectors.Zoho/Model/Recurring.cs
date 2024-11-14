@@ -82,6 +82,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         public String? EmailInvoiceAddress { get; set; }
 
         [JsonProperty("End_Date")]
+        [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
         public DateTimeOffset? EndDate { get; set; }
 
         [JsonProperty("EstimateNr")]
@@ -126,6 +127,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         }
 
         [JsonProperty("LastInvoice")]
+        [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
         public DateTimeOffset? LastInvoice { get; set; }
 
         [JsonProperty("LastInvoiceNumber")]
@@ -155,9 +157,11 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         public string Name { get; set; }
 
         [JsonProperty("NextInvoice")]
+        [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
         public DateTimeOffset? NextInvoice { get; set; }
 
         [JsonProperty("Next_Renewal_Date")]
+        [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
         public DateTimeOffset? NextRenewalDate { get; set; }
 
         [JsonProperty("Terminated")]
@@ -167,6 +171,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         public Uri? OnboardingHarvestProjectURL { get; set; }
 
         [JsonProperty("Onboarding_Start_Date")]
+        [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
         public DateTimeOffset? OnboardingStartDate { get; set; }
 
         [JsonProperty("OrderNr")]
@@ -214,6 +219,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         public LookupObject ServicesAndProducts { get; set; }
 
         [JsonProperty("Start_Date")]
+        [JsonConverter(typeof(DateFormatConverter), "yyyy-MM-dd")]
         public DateTimeOffset? StartDate { get; set; }
 
         [JsonProperty("Tag")]

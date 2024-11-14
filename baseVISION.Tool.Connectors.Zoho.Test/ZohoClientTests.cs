@@ -70,5 +70,17 @@ namespace baseVISION.Tool.Connectors.Zoho.Test
             var test = leads.Data.Where(x => x.Name.Contains("ignore")).ToList();
             Assert.IsTrue(leads.Data.Count > 0);
         }
+
+        [TestMethod()]
+        public void UpdateTest()
+        {
+            Initialize();
+            var recurring = zohoClient.Recurrings.List();
+            var test = recurring.Data.Where(x => x.Name.Contains("Test Recurring Vogel Engineering")).ToList();
+            test[0].LastInvoiceNumber = test[0].LastInvoiceNumber + ";test";
+            var a =zohoClient.Recurrings.Update(test[0]);
+            
+            Assert.IsTrue(test.Count > 0);
+        }
     }
 }
