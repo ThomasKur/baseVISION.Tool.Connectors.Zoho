@@ -20,7 +20,7 @@ namespace baseVISION.Tool.Connectors.Zoho
             get { try { return Convert.ToInt32((ExpiryTime - DateTime.Now).TotalSeconds); } catch { return 0; }  }
             set { if (ExpiryTime == default(DateTime)) { ExpiryTime = DateTime.Now.AddSeconds(value); }; }
         }
-        public DateTime ExpiryTime { get; protected set; }
+        public DateTime ExpiryTime { get; set; }
 
     }
 }

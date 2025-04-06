@@ -13,7 +13,8 @@
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
     <PackageReleaseNotes>
-		3.0.7: Improve ExpiryIn Handling in Token / Update libraries
+		3.0.7: Improve ExpiryIn Handling in Token (public) / Update libraries
+		3.0.7: Improve ExpiryIn Handling in Token (protected) / Update libraries
 		3.0.6: Bugfix Date field handling / Update libraries
 		3.0.5: Add Rename field in Recurring to Terminated
 		3.0.4: Add RmaProject (Recurring)
@@ -41,9 +42,9 @@
 		1.0.0: First Version
 	</PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>3.0.7</Version>
-    <AssemblyVersion>3.0.7.0</AssemblyVersion>
-    <FileVersion>3.0.7.0</FileVersion>
+    <Version>3.0.8</Version>
+    <AssemblyVersion>3.0.8.0</AssemblyVersion>
+    <FileVersion>3.0.8.0</FileVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
