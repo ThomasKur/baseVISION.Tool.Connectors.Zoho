@@ -12,36 +12,38 @@
     <Copyright>Thomas Kurth</Copyright>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
-    <PackageReleaseNotes>3.0.6: Bugfix Date field handling / Update libraries
-3.0.5: Add Rename field in Recurring to Terminated
-3.0.4: Add RmaProject (Recurring)
-3.0.3: Add Reference field (Recurring)
-3.0.2: Update Restsharp / Add Recurrings
-3.0.1: Throw exception on invalid token
-3.0.0: Change to .NET 8 and update libraries
-2.0.6: fix employee null
-2.0.4: Change ResourcePlan Employee field to new picklist Preferred_Employee
-2.0.3: Bugfix resourceplan
-2.0.2: Added new Custom Module ResourcePlan
-2.0.1: Stable release with new libraries and added support for Async usage
-2.0.0-alpha: Use Restsharp 107 and JSONNet 13
-1.0.12: Added new fields (SignedNDA) to accounts
-1.0.11: Bugfix when Amount is null
-1.0.10: Added new fields to accounts
-1.0.9: Added trigger properties so that on add or update workflows are also triggered.
-1.0.7: Improved Access Token Caching and reliability. 
-1.0.6: Allow specifiing the accesstoken if this is already available. Especially for stateless systems like Azure Functions this can be Helpful
-1.0.5: Make ShouldSerialize methods virtual to allow override. 
-1.0.4: Updating RestSharp and JSON.net
-1.0.3: Enum Value conversion fixed by Adding an Unknown Value which is choosen if the value is not available in the enum.
-1.0.2: Enum Value for Lead Source fixed
-1.0.1: Enum Value for Account Rating fixed
-1.0.0: First Version
-</PackageReleaseNotes>
+    <PackageReleaseNotes>
+		3.0.7: Improve ExpiryIn Handling in Token / Update libraries
+		3.0.6: Bugfix Date field handling / Update libraries
+		3.0.5: Add Rename field in Recurring to Terminated
+		3.0.4: Add RmaProject (Recurring)
+		3.0.3: Add Reference field (Recurring)
+		3.0.2: Update Restsharp / Add Recurrings
+		3.0.1: Throw exception on invalid token
+		3.0.0: Change to .NET 8 and update libraries
+		2.0.6: fix employee null
+		2.0.4: Change ResourcePlan Employee field to new picklist Preferred_Employee
+		2.0.3: Bugfix resourceplan
+		2.0.2: Added new Custom Module ResourcePlan
+		2.0.1: Stable release with new libraries and added support for Async usage
+		2.0.0-alpha: Use Restsharp 107 and JSONNet 13
+		1.0.12: Added new fields (SignedNDA) to accounts
+		1.0.11: Bugfix when Amount is null
+		1.0.10: Added new fields to accounts
+		1.0.9: Added trigger properties so that on add or update workflows are also triggered.
+		1.0.7: Improved Access Token Caching and reliability.
+		1.0.6: Allow specifiing the accesstoken if this is already available. Especially for stateless systems like Azure Functions this can be Helpful
+		1.0.5: Make ShouldSerialize methods virtual to allow override.
+		1.0.4: Updating RestSharp and JSON.net
+		1.0.3: Enum Value conversion fixed by Adding an Unknown Value which is choosen if the value is not available in the enum.
+		1.0.2: Enum Value for Lead Source fixed
+		1.0.1: Enum Value for Account Rating fixed
+		1.0.0: First Version
+	</PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>3.0.6</Version>
-    <AssemblyVersion>3.0.5.0</AssemblyVersion>
-    <FileVersion>3.0.5.0</FileVersion>
+    <Version>3.0.7</Version>
+    <AssemblyVersion>3.0.7.0</AssemblyVersion>
+    <FileVersion>3.0.7.0</FileVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>

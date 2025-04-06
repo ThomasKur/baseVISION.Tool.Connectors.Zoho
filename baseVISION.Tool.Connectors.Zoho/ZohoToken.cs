@@ -18,8 +18,9 @@ namespace baseVISION.Tool.Connectors.Zoho
         [JsonProperty(PropertyName =  "expires_in_sec")]
         public int ExpiresIn {
             get { try { return Convert.ToInt32((ExpiryTime - DateTime.Now).TotalSeconds); } catch { return 0; }  }
-            set { ExpiryTime = DateTime.Now.AddSeconds(value); }
+            set { if (ExpiryTime == default(DateTime)) { ExpiryTime = DateTime.Now.AddSeconds(value); }; }
         }
-        public DateTime ExpiryTime { get; private set; }
+        public DateTime ExpiryTime { get; protected set; }
+
     }
 }
