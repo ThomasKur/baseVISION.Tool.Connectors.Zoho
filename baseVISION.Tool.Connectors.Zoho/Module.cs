@@ -81,6 +81,18 @@ namespace baseVISION.Tool.Connectors.Zoho
             return await client.ExecuteAsync<Result<T>>(r);
         }
 
+        public Result<TResult> GetRelatedRecords<TResult>(string id, string relatedModule)
+        {
+            RestRequest r = new RestRequest($"crm/v2/{module}/{id}/{relatedModule}", Method.Get);
+            return client.Execute<Result<TResult>>(r);
+        }
+
+        public async Task<Result<TResult>> GetRelatedRecordsAsync<TResult>(string id, string relatedModule)
+        {
+            RestRequest r = new RestRequest($"crm/v2/{module}/{id}/{relatedModule}", Method.Get);
+            return await client.ExecuteAsync<Result<TResult>>(r);
+        }
+
         public Result<ActionResult> Add(T record)
         {
             RestRequest r = new RestRequest("crm/v2/" + module, Method.Post);

@@ -161,6 +161,9 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("Azure_Tenant_ID")]
         public string AzureTenantID { get; set; }
 
+        [JsonProperty("Alternative_Tenant_IDs")]
+        public string AlternativeTenantIDs { get; set; }
+
         [JsonProperty("Azure_AD_Primary_Domain_Name")]
         public string AzureADPrimaryDomainName { get; set; }
 

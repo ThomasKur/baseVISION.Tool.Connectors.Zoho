@@ -116,6 +116,9 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         [JsonProperty("InvoiceDescription")]
         public String InvoiceDescription { get; set; }
 
+        [JsonProperty("VisibleInvoiceNote")]
+        public string VisibleInvoiceNote { get; set; }
+
         [JsonProperty("InvoiceDueDays")]
         public Int32? InvoiceDueDays { get; set; }
 

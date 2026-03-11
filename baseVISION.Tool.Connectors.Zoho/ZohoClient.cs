@@ -38,8 +38,8 @@ namespace baseVISION.Tool.Connectors.Zoho
             Contacts = new Module<Contact>(this, "Contacts");
             Deals = new Module<Deal>(this, "Deals");
             ResourcePlans = new Module<ResourcePlans>(this, "ResourcePlans");
-
             Recurrings = new Module<Recurring>(this, "Recurrings");
+            Products = new Module<Product>(this, "Products");
         }
         public ZohoClient(Uri endpoint, string clientId, string clientSecret, string refreshToken,ZohoTokenInformation accessToken, int asyncTaskTimeout = 5000)
         {
@@ -66,6 +66,7 @@ namespace baseVISION.Tool.Connectors.Zoho
             Deals = new Module<Deal>(this, "Deals");
             ResourcePlans = new Module<ResourcePlans>(this, "ResourcePlans");
             Recurrings = new Module<Recurring>(this, "Recurrings");
+            Products = new Module<Product>(this, "Products");
         }
 
         private void InitializeDataClient()
@@ -98,5 +99,15 @@ namespace baseVISION.Tool.Connectors.Zoho
         public Module<Deal> Deals { get; private set; }
         public Module<ResourcePlans> ResourcePlans { get; private set; }
         public Module<Recurring> Recurrings { get; private set; }
+        public Module<Product> Products { get; private set; }
+
+        public Result<Product> GetProductsForRecurring(string recurringId) => Recurrings.GetRelatedRecords<Product>(recurringId, "Products");
+        public Task<Result<Product>> GetProductsForRecurringAsync(string recurringId) => Recurrings.GetRelatedRecordsAsync<Product>(recurringId, "Products");
+
+        public Result<Product> GetProductsForAccount(string accountId) => Accounts.GetRelatedRecords<Product>(accountId, "Products");
+        public Task<Result<Product>> GetProductsForAccountAsync(string accountId) => Accounts.GetRelatedRecordsAsync<Product>(accountId, "Products");
+
+        public Result<Product> GetProductsForDeal(string dealId) => Deals.GetRelatedRecords<Product>(dealId, "Products");
+        public Task<Result<Product>> GetProductsForDealAsync(string dealId) => Deals.GetRelatedRecordsAsync<Product>(dealId, "Products");
     }
 }
