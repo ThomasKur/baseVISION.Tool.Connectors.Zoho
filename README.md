@@ -1,4 +1,3 @@
-
 # Zoho API V2 Client
 
 This library allows connecting to the Zoho CRM API v2 and requesting the most important entities from there.
@@ -37,6 +36,131 @@ client.Contacts.Add(new Connectors.Zoho.Model.Contact() { FirstName="Test" });
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Release Notes
+
+### 3.0.11
+- Features: Update Libraries
+
+### 3.0.10
+- Features: Add Products module and related lists.
+- Bug fixes: None.
+
+### 3.0.9
+- Features: Add new `Visible Note` field to `Recurrings`.
+- Bug fixes: None.
+
+### 3.0.7 (public token handling)
+- Features: Update libraries.
+- Bug fixes: Improve `ExpiryIn` handling in token (public).
+
+### 3.0.7 (protected token handling)
+- Features: Update libraries.
+- Bug fixes: Improve `ExpiryIn` handling in token (protected).
+
+### 3.0.6
+- Features: Update libraries.
+- Bug fixes: Fix date field handling.
+
+### 3.0.5
+- Features: Add rename field in `Recurring` to `Terminated`.
+- Bug fixes: None.
+
+### 3.0.4
+- Features: Add `RmaProject` (`Recurring`).
+- Bug fixes: None.
+
+### 3.0.3
+- Features: Add `Reference` field (`Recurring`).
+- Bug fixes: None.
+
+### 3.0.2
+- Features: Add `Recurrings` and update `RestSharp`.
+- Bug fixes: None.
+
+### 3.0.1
+- Features: None.
+- Bug fixes: Throw exception on invalid token.
+
+### 3.0.0
+- Features: Change to .NET 8 and update libraries.
+- Bug fixes: None.
+
+### 2.0.6
+- Features: None.
+- Bug fixes: Fix `employee` null handling.
+
+### 2.0.4
+- Features: Change `ResourcePlan` employee field to new picklist `Preferred_Employee`.
+- Bug fixes: None.
+
+### 2.0.3
+- Features: None.
+- Bug fixes: Fix `resourceplan`.
+
+### 2.0.2
+- Features: Add new custom module `ResourcePlan`.
+- Bug fixes: None.
+
+### 2.0.1
+- Features: Stable release with new libraries and added support for async usage.
+- Bug fixes: None.
+
+### 2.0.0-alpha
+- Features: Use `RestSharp 107` and `JSONNet 13`.
+- Bug fixes: None.
+
+### 1.0.12
+- Features: Add new fields (`SignedNDA`) to accounts.
+- Bug fixes: None.
+
+### 1.0.11
+- Features: None.
+- Bug fixes: Fix handling when `Amount` is null.
+
+### 1.0.10
+- Features: Add new fields to accounts.
+- Bug fixes: None.
+
+### 1.0.9
+- Features: Add trigger properties so workflows are triggered on add or update.
+- Bug fixes: None.
+
+### 1.0.7
+- Features: Improve access token caching and reliability.
+- Bug fixes: None.
+
+### 1.0.6
+- Features: Allow specifying the access token if already available (helpful for stateless systems like Azure Functions).
+- Bug fixes: None.
+
+### 1.0.5
+- Features: Make `ShouldSerialize` methods virtual to allow override.
+- Bug fixes: None.
+
+### 1.0.4
+- Features: Update `RestSharp` and `JSON.NET`.
+- Bug fixes: None.
+
+### 1.0.3
+- Features: Add `Unknown` enum value fallback when API value is not available in enum.
+- Bug fixes: Fix enum value conversion.
+
+### 1.0.2
+- Features: None.
+- Bug fixes: Fix enum value for lead source.
+
+### 1.0.1
+- Features: None.
+- Bug fixes: Fix enum value for account rating.
+
+### 1.0.0
+- Features: First version.
+- Bug fixes: None.
+
+## Release documentation
+
+Every release must include a new entry in the `PackageReleaseNotes` field of the `.csproj` and describe the same changes in this README so users can see what was updated without unpacking the package.
 
 ## Authors
 
