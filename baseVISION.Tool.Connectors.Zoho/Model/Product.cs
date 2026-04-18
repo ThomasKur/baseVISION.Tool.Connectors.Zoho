@@ -183,7 +183,7 @@ namespace baseVISION.Tool.Connectors.Zoho.Model
         public bool? Taxable { get; set; }
 
         [JsonProperty("Technical_Lead")]
-        public List<LookupObject> TechnicalLead { get; set; }
+        public List<string> TechnicalLead { get; set; }
 
         [JsonProperty("Technology")]
         public string Technology { get; set; }

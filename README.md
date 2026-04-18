@@ -17,8 +17,32 @@ The API client is available as a nuget package and can easily be installed from 
 Creating the client by specifying the secrets you received in the step before:
 ```
 ZohoClient client = new ZohoClient(new Uri("https://accounts.zoho.eu/"), "%ClientId%", "%ClientSecret%", "%RefreshToken%");
-            
+
 ```
+
+### Configuring Retry Behavior
+
+You can customize the retry behavior for rate-limited API calls and token refresh operations:
+
+```csharp
+// Configure custom retry settings: 5 retries with 3 second base delay
+ZohoClient client = new ZohoClient(
+    new Uri("https://accounts.zoho.eu/"), 
+    "%ClientId%", 
+    "%ClientSecret%", 
+    "%RefreshToken%",
+    asyncTaskTimeout: 5000,      // Default timeout for async operations
+    logger: myLogger,             // Optional ILogger instance
+    maxRetries: 5,                // Number of retry attempts (default: 3)
+    retryDelayBaseMs: 3000        // Base delay in ms, multiplied by attempt number (default: 5000)
+);
+```
+
+The retry logic uses exponential backoff: first retry after `retryDelayBaseMs`, second after `retryDelayBaseMs * 2`, etc.
+For example, with default settings (3 retries, 5000ms base delay):
+- 1st retry: 5 seconds delay
+- 2nd retry: 10 seconds delay  
+- 3rd retry: 15 seconds delay
 
 ### Retrieving Objects
 
@@ -38,6 +62,13 @@ client.Contacts.Add(new Connectors.Zoho.Model.Contact() { FirstName="Test" });
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Release Notes
+
+### 3.0.12
+- Features: Add configurable retry logic with exponential backoff for token refresh and API operations to handle rate limits gracefully.
+- Features: Consumers can now customize retry count (default: 3) and backoff delay (default: 5000ms) via constructor parameters.
+- Features: Improve test suite with intelligent pagination checks using MoreRecords metadata before attempting to load page 2.
+- Features: Optimize test performance by sharing ZohoClient and token across all tests using AssemblyInitialize, reducing unnecessary API calls.
+- Bug fixes: Fix token refresh failing when rate limited - now automatically retries with configurable delays.
 
 ### 3.0.11
 - Features: Update Libraries

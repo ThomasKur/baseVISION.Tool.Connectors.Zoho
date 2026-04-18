@@ -12,11 +12,11 @@
     <Copyright>Thomas Kurth</Copyright>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho</RepositoryUrl>
-    <PackageReleaseNotes>See Readme</PackageReleaseNotes>
+    <PackageReleaseNotes>Features: Add configurable retry logic with exponential backoff for token refresh and API operations. Consumers can customize retry count and backoff delay via constructor. Improve test suite with intelligent pagination checks and shared client instances. Bug fixes: Fix token refresh rate limit handling with automatic retries.</PackageReleaseNotes>
     <PackageIconUrl>https://github.com/ThomasKur/baseVISION.Tool.Connectors.Zoho/blob/master/zoho-crm-api-integration-logo.jpg</PackageIconUrl>
-    <Version>3.0.11</Version>
-    <AssemblyVersion>3.0.11.0</AssemblyVersion>
-    <FileVersion>3.0.11.0</FileVersion>
+    <Version>3.0.12</Version>
+    <AssemblyVersion>3.0.12.0</AssemblyVersion>
+    <FileVersion>3.0.12.0</FileVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
@@ -28,6 +28,7 @@
   <ItemGroup>
     <PackageReference Include="RestSharp" Version="114.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="Pack">
     <Exec Command="xcopy &quot;$(TargetDir)..\*.nupkg&quot; &quot;C:\LocalLibrary&quot; /C /Y" />
